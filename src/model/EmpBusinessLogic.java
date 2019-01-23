@@ -4,14 +4,12 @@ import main.Employee;
 
 public class EmpBusinessLogic {
 	
-	public double calculateYearlySalary(Employee employee) {
-		return 0.0;
-	}
-	
-	public double calculateAppraisal(Employee employee) {
-		return 0.0;
-	}
-	
+	/*
+	 * public double calculateYearlySalary(Employee employee) { return 0.0; }
+	 * 
+	 * public double calculateAppraisal(Employee employee) { return 0.0; }
+	 */
+
 	public double calculateYearlySalary(Employee employee) {
 		double yearlySalary = 0;
 		yearlySalary = employee.getMonthlySalary() * 12;
@@ -27,8 +25,18 @@ public class EmpBusinessLogic {
 		} else {
 			appraisal = 1000;
 		}
-
+		
 		return appraisal;
 	}
-
+	
+	public boolean isRetirementAge(Employee employee) {
+		boolean retireAge;
+		if (employee.getAge() > 65) {
+			retireAge = true;
+		} else {
+			retireAge = false;					
+		}
+		
+		return retireAge;
+	}
 }
